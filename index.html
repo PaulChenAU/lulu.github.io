@@ -4,16 +4,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>For LuLu</title>
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
+    <script src="vue.js"></script>
     <link rel="stylesheet" type="text/css" href="index.css" />
 
 </head>
 <body>
-    <div id="header">
+    <div class="header">
        <img src="header-zi.png" />
     </div>
-    <div id="counter">
-        {{ message }}
+    <div class="counter countdown">
+        <span class="countdown-row countdown5" id="countdown">
+            <span class="countdown-section">
+                <span class="countdown-amount">{{ months }}</span>
+                <span class="countdown-period">月</span>
+            </span>
+            <span class="countdown-section">
+                <span class="countdown-amount">{{ days }}</span>
+                <span class="countdown-period">天</span>
+            </span>
+            <span class="countdown-section">
+                <span class="countdown-amount">{{ hours }}</span>
+                <span class="countdown-period">小时</span>
+            </span>
+            <span class="countdown-section">
+                <span class="countdown-amount">{{ minutes }}</span>
+                <span class="countdown-period">分钟</span>
+            </span>
+            <span class="countdown-section">
+                <span class="countdown-amount">{{ seconds }}</span>
+                <span class="countdown-period">秒</span>
+            </span>
+        </span>
     </div>
     <div id=""></div>
 

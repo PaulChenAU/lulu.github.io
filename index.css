@@ -4,9 +4,50 @@ body,button,dd,dl,dt,fieldset,form,h1,h2,h3,h4,h5,h6,input,legend,li,ol,p,select
 }
 
 /* header css */
-#header{}
+.header{
+    display: block;
+}
 
 img{
     height: auto;
     width: 100%;
+}
+
+/* counter css */
+.counter{
+    width: 90%;
+    height: 100px;
+    margin-right: auto; 
+    margin-left: auto;
+}
+
+.countdown{
+    border: 1px solid #ccc;
+}
+
+.countdown-row{
+    clear: both;
+    width: 100%;
+    height: auto;
+    text-align: center;
+}
+
+.countdown5 .countdown-section{
+    width: 20%;
+}
+
+.countdown-section{
+    display: block;
+    float: left;
+    font-size: 150%;
+    text-align: center;
+}
+
+.countdown-amount {
+    font-size: 200%;
+}
+
+.countdown-period {
+    display: block;
+    font-size: 75%;
 }
