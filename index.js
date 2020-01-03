@@ -10,11 +10,14 @@ var countdown = new Vue({
     mounted: function() {
         setInterval(function(){
             var now = new Date().getTime();
-            var end = new Date('2020/02/13 18:55:49:123').getTime();
+            var end = new Date(2020,1,13,18,55,49).getTime();
             var diff = parseInt((end - now)/1000);
             // since we know only count january days..
             // thus hardcode to 31..
             var months = diff/(31 * 24 * 60 * 60);
+            console.log(months);
+            console.log(now);
+            console.log(end);
             this.months = parseInt(months);
             
             var rem = diff - parseInt(months) * (31 * 24 * 60 * 60);
