@@ -3,6 +3,9 @@ body,button,dd,dl,dt,fieldset,form,h1,h2,h3,h4,h5,h6,input,legend,li,ol,p,select
     padding: 0
 }
 
+body{
+}
+
 /* header css */
 .header{
     display: block;
@@ -22,7 +25,7 @@ img{
 }
 
 .countdown{
-    border: 1px solid #ccc;
+    border: 1px solid grey;
 }
 
 .countdown-row{
@@ -51,3 +54,62 @@ img{
     display: block;
     font-size: 75%;
 }
+
+/* heart css */
+
+#d {
+    display: block;
+    margin: 0 auto;
+}
+
+#c {
+    top: 0px;
+    left: 0px;
+    position: absolute;
+}
+
+/*  
+.heart{
+    width: 100px;
+    height: 100px;
+    background: red;
+    margin:100px auto 0;
+    position: relative;
+    transform: rotate(-45deg);
+    animation: putongputong 2s infinite;
+}
+.heart:after{
+    display: block;
+    content: '';
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: red;
+    position: absolute;
+    top: -50px;
+    left: 0;
+}
+.heart:before{
+    display: block;
+    content: '';
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: red;
+    position: absolute;
+    right: -50px;
+    top: 0;
+}
+
+@keyframes putongputong{
+    0%{
+        transform: rotate(-45deg) scale(0.8);
+    }
+    50%{
+        transform: rotate(-45deg) scale(1.1);
+    }
+    100%{
+        transform: rotate(-45deg) scale(0.8);
+    }
+}
+*/
