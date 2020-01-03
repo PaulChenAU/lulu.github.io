@@ -45,7 +45,7 @@ var canvas = document.querySelector('canvas'),
 	deform = {a:4, s:0.4, min:-200, max:200, dir:1}
 	repaint = 'rgba(255,192,203,0.15)';
 
-const mcos = Math.cos,
+var mcos = Math.cos,
 	  msin = Math.sin,
 	  mpow = Math.pow,
 	  mrandom = Math.random,
@@ -56,7 +56,7 @@ canvas.width = width;
 canvas.height = height;
 ctx.lineWidth = 1;
 
-const ParticleSystem = function(num){
+var ParticleSystem = function(num){
     this.colour = '#f00';
 	this.numParticles = num;
 	this.allParticles = [];
@@ -85,7 +85,7 @@ ParticleSystem.prototype.update = function(){
 	}
 }
 
-const Particle = function(vo){
+var Particle = function(vo){
 	this.degrees = vo.degrees;
 	this.parent = vo.parent;
 	this.scalar = vo.scalar;
