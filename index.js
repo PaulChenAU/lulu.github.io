@@ -8,36 +8,36 @@ var countdown = new Vue({
         seconds: 0
     },
     mounted: function() {
-        setInterval(() =>{
-            let now = new Date().getTime();
-            let end = new Date('2020-02-13 18:55:49:123').getTime();
-            let diff = parseInt((end - now)/1000);
+        setInterval(function(){
+            var now = new Date().getTime();
+            var end = new Date('2020-02-13 18:55:49:123').getTime();
+            var diff = parseInt((end - now)/1000);
             // since we know only count january days..
             // thus hardcode to 31..
-            let months = diff/(31 * 24 * 60 * 60);
+            var months = diff/(31 * 24 * 60 * 60);
             this.months = parseInt(months);
             
-            let rem = diff - parseInt(months) * (31 * 24 * 60 * 60);
-            let days = rem/(24 * 60 * 60);
+            var rem = diff - parseInt(months) * (31 * 24 * 60 * 60);
+            var days = rem/(24 * 60 * 60);
             this.days = parseInt(days);
 
             rem = rem - parseInt(days) * (24 * 60 * 60);
-            let hours = rem/(60 * 60);
+            var hours = rem/(60 * 60);
             this.hours = parseInt(hours);
 
             rem = rem - parseInt(hours) * (60 * 60);
-            let minutes = rem/60;
+            var minutes = rem/60;
             this.minutes = parseInt(minutes);
 
             rem = rem - parseInt(minutes) * 60;
-            let seconds = rem;
+            var seconds = rem;
             this.seconds = seconds;
-        }, 1000);
+        }.bind(this), 1000);
     }
 
 });
 
-let canvas = document.querySelector('canvas'),
+var canvas = document.querySelector('canvas'),
 	width = 300,
 	height = 300,
 	ctx = canvas.getContext('2d'),
@@ -65,8 +65,8 @@ const ParticleSystem = function(num){
 	this.generate();
 }
 ParticleSystem.prototype.generate = function(){
-	for(let i=0; i<this.numParticles; i++){
-		let vo = {};
+	for(var i=0; i<this.numParticles; i++){
+		var vo = {};
 		vo.degrees = (360 / this.numParticles) * i * PI180;
 		vo.parent = this;
 		vo.scalar = 2 + (6 / this.numParticles) * i;
@@ -80,7 +80,7 @@ ParticleSystem.prototype.generate = function(){
 	}
 }
 ParticleSystem.prototype.update = function(){
-	for(let i=0; i<this.allParticles.length; i++){
+	for(var i=0; i<this.allParticles.length; i++){
 		this.allParticles[i].update();
 	}
 }
@@ -117,8 +117,8 @@ function update(){
 function draw(){
 	ctx.fillStyle = repaint;
 	ctx.fillRect(0, 0, width, height);
-	for(let i=0; i<system.numParticles; i++){
-		let p = system.allParticles[i];
+	for(var i=0; i<system.numParticles; i++){
+		var p = system.allParticles[i];
 		ctx.fillStyle = system.colour;
 		ctx.beginPath();
 		ctx.arc(p.x, p.y, p.size, 0, tau, false);
@@ -130,7 +130,7 @@ function animate(){
 	draw();
 	requestAnimationFrame(animate);
 }
-let system = new ParticleSystem(pSystemSize);
+var system = new ParticleSystem(pSystemSize);
 ctx.fillStyle = system.colour;
 animate();
 
