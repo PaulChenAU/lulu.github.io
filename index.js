@@ -15,9 +15,6 @@ var countdown = new Vue({
             // since we know only count january days..
             // thus hardcode to 31..
             var months = diff/(31 * 24 * 60 * 60);
-            console.log(months);
-            console.log(now);
-            console.log(end);
             this.months = parseInt(months);
             
             var rem = diff - parseInt(months) * (31 * 24 * 60 * 60);
