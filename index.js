@@ -10,7 +10,7 @@ var countdown = new Vue({
     mounted: function() {
         setInterval(function(){
             var now = new Date().getTime();
-            var end = new Date('2020-02-13 18:55:49:123').getTime();
+            var end = new Date('2020/02/13 18:55:49:123').getTime();
             var diff = parseInt((end - now)/1000);
             // since we know only count january days..
             // thus hardcode to 31..
@@ -32,7 +32,7 @@ var countdown = new Vue({
             rem = rem - parseInt(minutes) * 60;
             var seconds = rem;
             this.seconds = seconds;
-            alert(this.seconds);
+            //alert(this.seconds);
         }.bind(this), 1000);
     }
 
