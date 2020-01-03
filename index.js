@@ -32,6 +32,7 @@ var countdown = new Vue({
             rem = rem - parseInt(minutes) * 60;
             var seconds = rem;
             this.seconds = seconds;
+            alert(this.seconds);
         }.bind(this), 1000);
     }
 
