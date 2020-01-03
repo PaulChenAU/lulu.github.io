@@ -43,7 +43,7 @@ let canvas = document.querySelector('canvas'),
 	ctx = canvas.getContext('2d'),
 	pSystemSize = 30,
 	deform = {a:4, s:0.4, min:-200, max:200, dir:1}
-	repaint = 'rgba(255,255,255,0.1)';
+	repaint = 'rgba(255,192,203,0.15)';
 
 const mcos = Math.cos,
 	  msin = Math.sin,

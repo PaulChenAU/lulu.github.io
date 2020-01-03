@@ -4,6 +4,7 @@ body,button,dd,dl,dt,fieldset,form,h1,h2,h3,h4,h5,h6,input,legend,li,ol,p,select
 }
 
 body{
+    background-color: pink;
 }
 
 /* header css */
@@ -62,11 +63,54 @@ img{
     margin: 0 auto;
 }
 
-#c {
-    top: 0px;
-    left: 0px;
-    position: absolute;
+body {
+    overflow: hidden;
 }
+
+.heart-body {
+    width: 500px;
+    margin: 100px auto;
+    position: relative;
+}
+
+.snowfall-flakes:before,
+.snowfall-flakes:after {
+    content: "";
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    display: block;
+    width: 10px;
+    height: 16px;
+    background: red;
+    border-radius: 10px 10px 0 0;
+}
+
+.snowfall-flakes:before {
+    -webkit-transform: rotate(-45deg);
+    /* Safari 和 Chrome */
+    -moz-transform: rotate(-45deg);
+    /* Firefox */
+    -ms-transform: rotate(-45deg);
+    /* IE 9 */
+    -o-transform: rotate(-45deg);
+    /* Opera */
+    transform: rotate(-45deg);
+}
+
+.snowfall-flakes:after {
+    left: 4px;
+    -webkit-transform: rotate(45deg);
+    /* Safari 和 Chrome */
+    -moz-transform: rotate(45deg);
+    /* Firefox */
+    -ms-transform: rotate(45deg);
+    /* IE 9 */
+    -o-transform: rotate(45deg);
+    /* Opera */
+    transform: rotate(45deg);
+}
+
 
 /*  
 .heart{

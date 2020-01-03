@@ -38,9 +38,21 @@
     </div>
     <!-- <div class="heart"></div> -->
     <canvas id="d"></canvas>
+
+    <div class="heart-body">
+        <div class="snowfall-flakes"></div>
+    </div>
     
 
     <script src="index.js"></script>
+    <script src="js/jquery.js" type="text/javascript"></script>
+    <script src="js/snowfall.jquery.js"></script>
+    <script>
+            //调用飘落函数 实现飘落效果
+        $(document).snowfall({
+            flakeCount: 50 //爱心的个数
+        });
+    </script>
     
 </body>
 </html>
